@@ -161,7 +161,7 @@ if [ "$input_container" == 'Matroska' ]; then
 
         if [ ! "$aac_audio_track" ]; then
             map_options="$map_options -map 0:$ac3_audio_track"
-            codec_options="-c:v copy -ac 2 -c:a:0 $aac_encoder -b:a:0 160k -c:a:1 copy"
+            codec_options="-c:v copy -ac 2 -strict -2 -c:a:0 $aac_encoder -b:a:0 160k -c:a:1 copy"
         fi
     fi
 
