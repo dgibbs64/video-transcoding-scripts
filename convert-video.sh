@@ -153,7 +153,7 @@ if [ "$input_container" == 'Matroska' ]; then
     if $(ffmpeg -version | grep enable-libfdk-aac >/dev/null); then
         aac_encoder='libfdk_aac'
     else
-        aac_encoder='libfaac'
+        aac_encoder='aac'
     fi
 
     if [ "$ac3_audio_track" ]; then
